@@ -23,6 +23,12 @@ body {
 * {
     box-sizing: border-box;
 }
+li {
+    margin: 1em 0;
+}
+dt {
+    margin-top: 1em;
+}
 /* dark mode */
 @media (prefers-color-scheme: dark) {
     html {
