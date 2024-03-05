@@ -1,14 +1,28 @@
-dt {
+header {
+    color: white;
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    width: 100%;
+}
+header * {
+    flex: 1;
+}
+a {
     color: blue;
 }
-div {
-    background: #4c1fa6; 
-    width: 200px;
-    color: white;
-    padding: 4px 8px 12px 28px;
-    border: 5px solid purple;
-    border-radius: 6px;
+:not(html, body, header, h1) {
+    max-width: 800px;
+    margin-inline: auto;
 }
-span {
-    background: red;
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: black;
+        color: white;
+    }
+    a {
+        color: skyblue;
+    }
 }
