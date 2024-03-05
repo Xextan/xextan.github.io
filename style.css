@@ -16,6 +16,13 @@ a {
     max-width: 800px;
     margin-inline: auto;
 }
+body { 
+    margin: 0;
+    padding: 8px;
+}
+* {
+    box-sizing: border-box;
+}
 /* dark mode */
 @media (prefers-color-scheme: dark) {
     html {
