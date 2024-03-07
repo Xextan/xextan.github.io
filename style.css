@@ -37,6 +37,7 @@ header {
     padding-left: 1em;
     width: 100%;
     overflow-x: auto;
+    margin-bottom: 1em;
 }
 header > * {
     display: block;
