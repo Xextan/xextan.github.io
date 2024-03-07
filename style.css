@@ -54,9 +54,17 @@ header > :nth-last-child(2) {
 a {
     color: blue;
 }
-:not(html, body, header, h1) {
+html {
     max-width: 800px;
     margin-inline: auto;
+}
+header, .fullwidth {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 body { 
     margin: 0;
