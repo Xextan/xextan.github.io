@@ -80,6 +80,9 @@ li {
 dt {
     margin-top: 1em;
 }
+input {
+    font-size: inherit;
+}
 /* dark mode */
 @media (prefers-color-scheme: dark) {
     html {
