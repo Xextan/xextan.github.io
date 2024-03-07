@@ -1,3 +1,32 @@
+/* fonts */
+@font-face {
+    font-family: "Noto Sans";
+    src: url("fonts/NotoSans-Regular.ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Noto Sans";
+    src: url("fonts/NotoSans-Italic.ttf");
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Noto Sans";
+    src: url("fonts/NotoSans-Bold.ttf");
+    font-display: swap;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Noto Sans";
+    src: url("fonts/NotoSans-BoldItalic.ttf");
+    font-display: swap;
+    font-weight: bold;
+    font-style: italic;
+}
+/* things */
+html {
+    font-family: "Noto Sans", sans-serif;
+}
 header {
     color: white;
     background-color: purple;
@@ -9,7 +38,7 @@ header {
     width: 100%;
     overflow-x: auto;
 }
-header * {
+header > * {
     display: block;
     /* margin-inline: 2rem; */
 }
@@ -50,5 +79,11 @@ dt {
     }
     a {
         color: skyblue;
+    }
+}
+/* mobile */
+@media (max-width: 800px) {
+    h1 {
+        font-size: 1.5em;
     }
 }
