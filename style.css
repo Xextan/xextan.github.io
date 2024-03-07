@@ -45,7 +45,7 @@ header > * {
 header a {
     color: white;
 }
-header :nth-last-child(2) {
+header > :nth-last-child(2) {
     margin-right: -1rem;
 }
 .fill {
