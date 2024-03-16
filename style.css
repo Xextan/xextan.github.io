@@ -56,10 +56,11 @@ a {
     color: blue;
 }
 html {
-    max-width: 800px;
+    max-width: 600px;
     margin-inline: auto;
+    line-height: 1.4;
 }
-header, .fullwidth {
+.fullwidth {
     width: 100vw;
     position: relative;
     left: 50%;
@@ -97,7 +98,7 @@ input {
     }
 }
 /* mobile */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     h1 {
         font-size: 1.5em;
     }
