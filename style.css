@@ -29,7 +29,7 @@ html {
 }
 header {
     color: white;
-    background-color: purple;
+    background-color: #600083; /* from xexlogo */
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -53,7 +53,7 @@ header > :nth-last-child(2) {
     flex: 1;
 }
 a {
-    color: blue;
+    color: #0063c2; /* oklch 50% 0.2 250 */
 }
 html {
     max-width: 600px;
@@ -93,8 +93,11 @@ input {
         background-color: black;
         color: white;
     }
+    header {
+        background-color: #8831b3; /* oklch 50% 0.2 312 */
+    }
     a {
-        color: skyblue;
+        color: #9cd3ff; /* oklch 85% 0.11 250 */
     }
 }
 /* mobile */
