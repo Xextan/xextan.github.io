@@ -1,38 +1,31 @@
 /* fonts */
 @font-face {
-  font-family: "Noto Sans";
-  src: url("https://raw.githubusercontent.com/notofonts/notofonts.github.io/refs/heads/main/fonts/NotoSans/hinted/ttf/NotoSans-Regular.ttf");
+  font-family: "Iosevka Dingdong";
+  src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-Regular.ttf");
   font-display: swap;
 }
 @font-face {
-  font-family: "Noto Sans";
-  src: url("https://raw.githubusercontent.com/notofonts/notofonts.github.io/refs/heads/main/fonts/NotoSans/hinted/ttf/NotoSans-Italic.ttf");
+  font-family: "Iosevka Dingdong";
+  src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-Oblique.ttf");
   font-style: italic;
   font-display: swap;
 }
 @font-face {
-  font-family: "Noto Sans";
-  src: url("https://raw.githubusercontent.com/notofonts/notofonts.github.io/refs/heads/main/fonts/NotoSans/hinted/ttf/NotoSans-Bold.ttf");
+  font-family: "Iosevka Dingdong";
+  src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-Bold.ttf");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
-  font-family: "Noto Sans";
-  src: url("https://raw.githubusercontent.com/notofonts/notofonts.github.io/refs/heads/main/fonts/NotoSans/hinted/ttf/NotoSans-Bold.ttf");
+  font-family: "Iosevka Dingdong";
+  src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-BoldOblique.ttf");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
-}
-@font-face {
-  font-family: "Noto Sans";
-  src: url("fonts/NotoSans-BoldItalic.ttf");
-  font-display: swap;
-  font-weight: bold;
-  font-style: italic;
 }
 /* things */
 html {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Iosevka Dingdong", sans-serif;
 }
 header {
   color: white;
