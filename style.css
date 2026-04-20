@@ -41,7 +41,7 @@ body {
     display: grid;
     margin: 0;
     grid-template-areas: "left main right";
-    grid-template-columns: [full-start] 1fr 4fr 1fr [full-end];
+    grid-template-columns: [full-start] 1fr minmax(0, 4fr) 1fr [full-end];
 }
 header {
     grid-column: full;
