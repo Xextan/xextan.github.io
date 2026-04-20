@@ -1,108 +1,132 @@
 /* fonts */
 @font-face {
-  font-family: "Iosevka Dingdong";
-  src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-Regular.ttf");
-  font-display: swap;
+    font-family: "Iosevka Dingdong";
+    src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-Regular.ttf");
+    font-display: swap;
 }
 @font-face {
-  font-family: "Iosevka Dingdong";
-  src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-Oblique.ttf");
-  font-style: italic;
-  font-display: swap;
+    font-family: "Iosevka Dingdong";
+    src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-Oblique.ttf");
+    font-style: italic;
+    font-display: swap;
 }
 @font-face {
-  font-family: "Iosevka Dingdong";
-  src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-Bold.ttf");
-  font-weight: 700;
-  font-display: swap;
+    font-family: "Iosevka Dingdong";
+    src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-Bold.ttf");
+    font-weight: 700;
+    font-display: swap;
 }
 @font-face {
-  font-family: "Iosevka Dingdong";
-  src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-BoldOblique.ttf");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
+    font-family: "Iosevka Dingdong";
+    src: url("https://raw.githubusercontent.com/Xextan/iosevka-dingdong/refs/heads/main/dist/IosevkaDingdong/TTF/IosevkaDingdong-BoldOblique.ttf");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
 }
 /* things */
-html {
-  font-family: "Iosevka Dingdong", sans-serif;
-}
-header {
-  color: white;
-  background-color: #600083; /* from xexlogo */
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  justify-content: start;
-  padding-left: 1em;
-  width: 100%;
-  overflow-x: auto;
-  margin-bottom: 1em;
-}
-header > * {
-  display: block;
-  /* margin-inline: 2rem; */
-}
-header a {
-  color: white;
-}
-header > :nth-last-child(2) {
-  margin-right: -1rem;
-}
-.fill {
-  flex: 1;
-}
-a {
-  color: #0063c2; /* oklch 50% 0.2 250 */
+* {
+    box-sizing: border-box;
 }
 html {
-  max-width: 600px;
-  margin-inline: auto;
-  line-height: 1.4;
-}
-.fullwidth {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+    font-family: "Iosevka Dingdong", sans-serif;
+    --purple: #600083; /* from xexlogo */
+    --blue: #3a84ca; /* oklch 60% 0.13 250 */
+    --yellow: #a87600; /* oklch 60% 0.13 80 */
+    --bg: white;
+    --fg: black;
+    background: var(--bg);
+    color: var(--fg);
 }
 body {
-  margin: 0;
-  padding: 8px;
+    display: grid;
+    margin: 0;
+    grid-template-areas: "left main right";
+    grid-template-columns: [full-start] 1fr 4fr 1fr [full-end];
 }
-* {
-  box-sizing: border-box;
+header {
+    grid-column: full;
+    margin: 0 0 1em;
+    padding: 0 1em;
+    color: white;
+    background-color: var(--purple);
+    h1 {
+        text-align: center;
+    }
+}
+nav, section {
+    grid-column: main;
+}
+nav {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--purple);
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    a {
+        padding: 0.25em 0.5em;
+        text-decoration: none;
+        color: var(--fg);
+        border-bottom: 2px solid transparent;
+        &:hover {
+            color: var(--yellow);
+        }
+    }
+}
+body:not(:has(section:target)) nav a[href="#main"],
+body:has(#main:target) nav a[href="#main"],
+body:has(#learn:target) nav a[href="#learn"],
+body:has(#texts:target) nav a[href="#texts"],
+body:has(#scripts:target) nav a[href="#scripts"],
+body:has(#mysteries:target) nav a[href="#mysteries"],
+body:has(#tools:target) nav a[href="#tools"] {
+    color: var(--yellow);
+    border-bottom-color: var(--yellow);
+    font-weight: bold;
+}
+section {
+    display: none;
+}
+section:target, body:not(:has(section:target)) #main {
+    display: block;
+}
+a {
+    color: var(--blue);
+}
+.fullwidth {
+    grid-column: full;
 }
 li {
-  margin: 1em 0;
+    margin: 1em 0;
 }
 ul li {
-  list-style-type: disc;
+    list-style-type: disc;
 }
-dt {
-  margin-top: 1em;
+mark {
+    background: var(--purple);
+    color: white;
 }
 input {
-  font-size: inherit;
+    font: inherit;
+    appearance: none;
+    &[type=text] {
+        border: 1px solid var(--purple);
+    }
 }
 /* dark mode */
 @media (prefers-color-scheme: dark) {
-  html {
-    background-color: black;
-    color: white;
-  }
-  header {
-    background-color: #8831b3; /* oklch 50% 0.2 312 */
-  }
-  a {
-    color: #9cd3ff; /* oklch 85% 0.11 250 */
-  }
+    html {
+        --purple: #8831b3; /* oklch 50% 0.2 312 */
+        --blue: #9cd3ff; /* oblch 85% 0.11 250 */
+        --yellow: #f4c677; /* oklch 85% 0.11 80 */
+        --bg: black;
+        --fg: white;
+    }
 }
 /* mobile */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.5em;
-  }
+    h1 {
+        font-size: 1.5em;
+    }
 }
