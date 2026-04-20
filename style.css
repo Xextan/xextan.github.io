@@ -29,9 +29,9 @@
 }
 html {
     font-family: "Iosevka Dingdong", sans-serif;
-    --purple: #600083; /* from xexlogo */
-    --blue: #3a84ca; /* oklch 60% 0.13 250 */
-    --yellow: #a87600; /* oklch 60% 0.13 80 */
+    --xpurple: #600083; /* from xexlogo */
+    --xblue: #3a84ca; /* oklch 60% 0.13 250 */
+    --xyellow: #a87600; /* oklch 60% 0.13 80 */
     --bg: white;
     --fg: black;
     background: var(--bg);
@@ -48,18 +48,18 @@ header {
     margin: 0 0 1em;
     padding: 0 1em;
     color: white;
-    background-color: var(--purple);
+    background-color: var(--xpurple);
     h1 {
         text-align: center;
     }
 }
-nav, section {
+body > :not(header) {
     grid-column: main;
 }
 nav {
     display: flex;
     gap: 0;
-    border-bottom: 1px solid var(--purple);
+    border-bottom: 1px solid var(--xpurple);
     overflow-x: auto;
     position: sticky;
     top: 0;
@@ -70,7 +70,7 @@ nav {
         color: var(--fg);
         border-bottom: 2px solid transparent;
         &:hover {
-            color: var(--yellow);
+            color: var(--xyellow);
         }
     }
 }
@@ -81,8 +81,8 @@ body:has(#texts:target) nav a[href="#texts"],
 body:has(#scripts:target) nav a[href="#scripts"],
 body:has(#mysteries:target) nav a[href="#mysteries"],
 body:has(#tools:target) nav a[href="#tools"] {
-    color: var(--yellow);
-    border-bottom-color: var(--yellow);
+    color: var(--xyellow);
+    border-bottom-color: var(--xyellow);
     font-weight: bold;
 }
 section {
@@ -92,7 +92,7 @@ section:target, body:not(:has(section:target)) #main {
     display: block;
 }
 a {
-    color: var(--blue);
+    color: var(--xblue);
 }
 .fullwidth {
     grid-column: full;
@@ -104,12 +104,11 @@ ul li {
     list-style-type: disc;
 }
 mark {
-    background: var(--purple);
+    background: var(--xpurple);
     color: white;
 }
 input {
     font: inherit;
-    appearance: none;
     &[type=text] {
         border: 1px solid var(--purple);
     }
@@ -117,9 +116,9 @@ input {
 /* dark mode */
 @media (prefers-color-scheme: dark) {
     html {
-        --purple: #8831b3; /* oklch 50% 0.2 312 */
-        --blue: #9cd3ff; /* oblch 85% 0.11 250 */
-        --yellow: #f4c677; /* oklch 85% 0.11 80 */
+        --xpurple: #8831b3; /* oklch 50% 0.2 312 */
+        --xblue: #9cd3ff; /* oblch 85% 0.11 250 */
+        --xyellow: #f4c677; /* oklch 85% 0.11 80 */
         --bg: black;
         --fg: white;
     }
